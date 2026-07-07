@@ -142,14 +142,7 @@ echo     - DEPLOY\LAUNCH_SERVER.bat (API server only)
 echo ================================================================
 echo.
 
-set /p LAUNCH="Launch full system now? [Y/n]: "
-if /i "!LAUNCH!"=="" set LAUNCH=Y
-if /i "!LAUNCH!"=="Y" (
-    echo.
-    echo Starting NEXUS GGUF Full System...
-    call "%ROOT%LAUNCH_NEXUS_FULL.bat"
-) else (
-    echo.
-    echo Redeployment complete. Launch manually when ready.
-    pause
-)
+echo.
+echo Starting NEXUS GGUF Full System (Autonomous Auto-Launch)...
+echo.
+call "%ROOT%LAUNCH_NEXUS_FULL.bat"
