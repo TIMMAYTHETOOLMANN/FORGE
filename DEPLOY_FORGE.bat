@@ -15,6 +15,21 @@ if errorlevel 1 (
     )
 )
 
+REM Auto-detect Python in default installation directories
+where python >nul 2>&1
+if errorlevel 1 (
+    for /d %%p in ("C:\Users\%USERNAME%\AppData\Local\Programs\Python\Python*") do (
+        if exist "%%p\python.exe" (
+            set "PATH=%%p;!PATH!"
+        )
+    )
+    for /d %%p in ("C:\Program Files\Python*") do (
+        if exist "%%p\python.exe" (
+            set "PATH=%%p;!PATH!"
+        )
+    )
+)
+
 echo.
 echo ╔══════════════════════════════════════════════════════════════╗
 echo ║       NEXUS GGUF FORGE — FULL DEPLOYMENT SYSTEM              ║
