@@ -1,0 +1,89 @@
+/* Material Web typescale utility classes (.md-typescale-*) */
+@import '@material/web/typography/md-typescale-styles.css';
+
+/*
+ * VENOM Nexus — cyberpunk retheme of the Material 3 token system.
+ * The app is dark-only: :root and .dark carry the same neon-on-black scheme
+ * (primary = electric neon green, error = blood red, surfaces = zinc-black).
+ * Every color is still a --md-sys-color-* token so all md-* components adapt.
+ */
+:root,
+.dark {
+  color-scheme: dark;
+
+  /* Electric neon green — active states, forged actions, slider progress */
+  --md-sys-color-primary: #39ff14;
+  --md-sys-color-on-primary: #04160a;
+  --md-sys-color-primary-container: #103218;
+  --md-sys-color-on-primary-container: #86ff6b;
+  --md-sys-color-inverse-primary: #0a6b1f;
+
+  /* Secondary — cooler emerald for supporting accents */
+  --md-sys-color-secondary: #34d399;
+  --md-sys-color-on-secondary: #04160f;
+  --md-sys-color-secondary-container: #0d2a20;
+  --md-sys-color-on-secondary-container: #6ee7b7;
+
+  /* Tertiary — cyan data highlights */
+  --md-sys-color-tertiary: #22d3ee;
+  --md-sys-color-on-tertiary: #04181c;
+  --md-sys-color-tertiary-container: #0b2b31;
+  --md-sys-color-on-tertiary-container: #67e8f9;
+
+  /* Blood red — hostility metrics and destructive semantics */
+  --md-sys-color-error: #ef4444;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #3f0d0d;
+  --md-sys-color-on-error-container: #fca5a5;
+
+  /* Vercel black + gunmetal zinc surfaces */
+  --md-sys-color-background: #09090b;
+  --md-sys-color-on-background: #e4e4e7;
+  --md-sys-color-surface: #09090b;
+  --md-sys-color-on-surface: #e4e4e7;
+  --md-sys-color-surface-variant: #27272a;
+  --md-sys-color-on-surface-variant: #a1a1aa;
+
+  --md-sys-color-outline: #3f3f46;
+  --md-sys-color-outline-variant: #27272a;
+
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+
+  --md-sys-color-inverse-surface: #e4e4e7;
+  --md-sys-color-inverse-on-surface: #18181b;
+
+  --md-sys-color-surface-dim: #09090b;
+  --md-sys-color-surface-bright: #27272a;
+  --md-sys-color-surface-container-lowest: #050506;
+  --md-sys-color-surface-container-low: #131316;
+  --md-sys-color-surface-container: #18181b;
+  --md-sys-color-surface-container-high: #212124;
+  --md-sys-color-surface-container-highest: #2a2a2e;
+
+  /* Typefaces */
+  --md-ref-typeface-brand: var(--font-roboto), Roboto, system-ui, sans-serif;
+  --md-ref-typeface-plain: var(--font-roboto), Roboto, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  font-family: var(--md-ref-typeface-plain);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Material Symbols icon font for <md-icon> */
+md-icon {
+  font-family: 'Material Symbols Outlined';
+}
