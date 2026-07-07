@@ -34,7 +34,7 @@ echo.
 echo ╔══════════════════════════════════════════════════════════════╗
 echo ║       NEXUS GGUF FORGE — FULL DEPLOYMENT SYSTEM              ║
 echo ║   Configure custom models via web interface at :3000         ║
-echo ╚══════════════════════════════════════════════════════════════╝
+╚══════════════════════════════════════════════════════════════╝
 echo.
 
 REM ── Phase 1: Environment Check ──
@@ -79,7 +79,7 @@ if errorlevel 1 (
 )
 
 if not exist "node_modules\next\dist\bin\next" (
-    echo   Installing frontend dependencies (first run)...
+    echo   Installing frontend dependencies...
     call pnpm install
 )
 echo   ✓ Frontend dependencies ready
