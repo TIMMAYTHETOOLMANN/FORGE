@@ -1,0 +1,26 @@
+# Environment variables
+.env*.local
+
+# Python
+*.pyc
+__pycache__/
+venv/
+.venv/
+*.egg-info/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Archives
+*.zip
+*.tar.gz
+
+# Runtime
+*.gguf
